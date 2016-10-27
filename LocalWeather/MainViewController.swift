@@ -26,7 +26,6 @@ class MainViewController: UITableViewController {
        refreshControl?.attributedTitle = NSAttributedString(string: "Updating")
         self.weatherUpdates.addSubview(refresh)
         
-
         loadRefreshControl()
         getForecast()
     }
@@ -39,8 +38,6 @@ class MainViewController: UITableViewController {
         return true
     }
     
-    
-
     func getForecast() {
         if dataTask != nil {
             dataTask?.cancel()
