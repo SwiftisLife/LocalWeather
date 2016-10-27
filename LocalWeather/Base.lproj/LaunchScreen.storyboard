@@ -16,12 +16,38 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Local Weather" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="baD-fn-0a0">
+                                <rect key="frame" x="180" y="180" width="240" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="BDP-SO-1PQ"/>
+                                    <constraint firstAttribute="height" constant="40" id="Y0P-ZP-1qr"/>
+                                </constraints>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sunny" translatesAutoresizingMaskIntoConstraints="NO" id="jvo-y5-9Yu">
+                                <rect key="frame" x="281" y="114" width="38" height="39"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="0.69921875" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="baD-fn-0a0" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="OV0-Kg-f74"/>
+                            <constraint firstItem="baD-fn-0a0" firstAttribute="centerX" secondItem="jvo-y5-9Yu" secondAttribute="centerX" id="P4h-uG-7UB"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="baD-fn-0a0" secondAttribute="bottom" constant="380" id="pjp-1S-UCr"/>
+                            <constraint firstItem="baD-fn-0a0" firstAttribute="top" secondItem="jvo-y5-9Yu" secondAttribute="bottom" constant="27" id="yjU-fC-35a"/>
+                        </constraints>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="55" y="343"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Sunny" width="38" height="39"/>
+    </resources>
 </document>

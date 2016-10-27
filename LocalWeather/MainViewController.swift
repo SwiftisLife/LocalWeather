@@ -10,34 +10,36 @@ import UIKit
 
 class MainViewController: UITableViewController {
     
-    var refresh = UIRefreshControl()
-    
     @IBOutlet var weatherUpdates: UITableView!
+    
+    var refresh = UIRefreshControl()
+    var days = [Forecast]()
+    var dataTask: NSURLSessionDataTask?
+    
     let apiKey = "7a8182889a67db17106dfc9c23243091"
     let defaultSession = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
-    var dataTask: NSURLSessionDataTask?
-    var days = [Forecast]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        // weatherUpdates.contentInset = UIEdgeInsetsZero
         
-          refreshControl?.tintColor = UIColor.grayColor()
-       // refreshControl?.attributedTitle = NSAttributedString(string: "Updating")
+        refreshControl?.tintColor = UIColor.grayColor()
+       refreshControl?.attributedTitle = NSAttributedString(string: "Updating")
         self.weatherUpdates.addSubview(refresh)
         
+
         loadRefreshControl()
         getForecast()
     }
+    
     func loadRefreshControl() {
         weatherUpdates.reloadData()
       
     }
-    
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-      
-        
+    override func prefersStatusBarHidden() -> Bool {
+        return true
     }
+    
     
 
     func getForecast() {
@@ -90,7 +92,6 @@ class MainViewController: UITableViewController {
         }
     }
 
-    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return days.count
     }
@@ -101,22 +102,22 @@ class MainViewController: UITableViewController {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCellWithIdentifier("data", forIndexPath: indexPath) as! Data
             let date = NSDate()
-            cell.dateLabel.text = date.dayOfWeekString() + ", \(date.dateString())"
-            cell.tempMaxLabel.text = String(day.temp.max) + "°"
-            cell.tempMinLabel.text = String(day.temp.min) + "°"
+            cell.dateLbl.text = date.dayOfWeekString() + ", \(date.dateString())"
+            cell.tempMaxLbl.text = String(day.temp.max) + "°"
+            cell.tempMinLbl.text = String(day.temp.min) + "°"
             let imageName = Forecast.artNameForCode(day.iconName)
-            cell.thumnailImageView.image = UIImage(named:imageName)
-            cell.descriptionLabel.text = day.description
+            cell.imageViewWeather.image = UIImage(named:imageName)
+            cell.descriptLbl.text = day.descript
             return cell
         } else {
-            let cell = tableView.dequeueReusableCellWithIdentifier("summaryCell", forIndexPath: indexPath) as! SummaryCell
+            let cell = tableView.dequeueReusableCellWithIdentifier("detailCell", forIndexPath: indexPath) as! DetailCell
             let date = NSDate(timeIntervalSince1970: Double(day.date))
-            cell.dateLabel.text = date.dayOfWeekString()
-            cell.tempMaxLabel.text = String(day.temp.max) + "°"
-            cell.tempMinLabel.text = String(day.temp.min) + "°"
+            cell.dateLbl.text = date.dayOfWeekString()
+            cell.tempMaxLbl.text = String(day.temp.max) + "°"
+            cell.tempMinLbl.text = String(day.temp.min) + "°"
             let imageName = Forecast.iconNameForCode(day.iconName)
-            cell.thumnailImageView.image = UIImage(named:imageName)
-            cell.descriptionLabel.text = day.description
+            cell.imageViewWeather.image = UIImage(named:imageName)
+            cell.descriptionLbl.text = day.descript
             return cell
         }
     }
@@ -149,7 +150,7 @@ class MainViewController: UITableViewController {
 extension NSDate {
     
     func dayOfWeekString() -> String {
-        var dayOfWeek:String = ""
+        var dayOfWeek: String = ""
         let formatter = NSDateFormatter()
         formatter.dateFormat = "EEEE"
         if isToday() || isTomorrow() {

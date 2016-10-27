@@ -11,8 +11,8 @@ struct Forecast {
     let date:Int
     let temp: (min:Int, max:Int)
     let iconName:String
-    let description:String
-    let humidity:Int // percentage
+    let descript:String
+    let humid:Int // percentage
     let pressure:Int // hPA
     let wind: (speed: Float, angle: Int)  // km/h NW (for example)
     
@@ -25,9 +25,9 @@ struct Forecast {
             
             let weather = json["weather"] as? [[String: AnyObject]],
             let iconName = weather[0]["icon"] as? String,
-            let description = weather[0]["main"] as? String,
+            let descript = weather[0]["main"] as? String,
             
-            let humidity = json["humidity"] as? Int,
+            let humid = json["humidity"] as? Int,
             let pressure = json["pressure"] as? Int,
             
             let windSpeed = json["speed"] as? Float,
@@ -40,8 +40,8 @@ struct Forecast {
         self.temp = (tempMin,tempMax)
         self.date = date
         self.iconName = iconName
-        self.description = description
-        self.humidity = humidity
+        self.descript = descript
+        self.humid = humid
         self.pressure = pressure
         self.wind = (windSpeed,windAngle)
         

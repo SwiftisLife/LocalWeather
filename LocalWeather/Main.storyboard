@@ -16,6 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexBackgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="sectionIndexTrackingBackgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="data" rowHeight="215" id="7ZP-Ho-7Rg" userLabel="Data" customClass="Data" customModule="LocalWeather" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="600" height="215"/>
@@ -164,14 +165,14 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <outlet property="dateLabel" destination="0NC-j9-tkl" id="GHw-1v-Boh"/>
-                                    <outlet property="descriptionLabel" destination="5VY-hI-ZZh" id="yB8-Qv-XWP"/>
-                                    <outlet property="tempMaxLabel" destination="TiZ-Bg-ZJA" id="hx1-yz-43e"/>
-                                    <outlet property="tempMinLabel" destination="BOf-dh-ARc" id="Emh-IE-0kk"/>
-                                    <outlet property="thumnailImageView" destination="7wa-vU-4SO" id="wvV-MY-FHK"/>
+                                    <outlet property="dateLbl" destination="0NC-j9-tkl" id="FdI-DN-gtE"/>
+                                    <outlet property="descriptLbl" destination="5VY-hI-ZZh" id="PTd-yN-G8d"/>
+                                    <outlet property="imageViewWeather" destination="7wa-vU-4SO" id="ggA-E0-jdP"/>
+                                    <outlet property="tempMaxLbl" destination="TiZ-Bg-ZJA" id="eF5-Oz-s6u"/>
+                                    <outlet property="tempMinLbl" destination="BOf-dh-ARc" id="MhA-Z7-lw4"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" selectionStyle="none" indentationWidth="10" reuseIdentifier="summaryCell" rowHeight="295" id="hTQ-wt-6md" customClass="SummaryCell" customModule="LocalWeather" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" selectionStyle="none" indentationWidth="10" reuseIdentifier="detailCell" rowHeight="295" id="hTQ-wt-6md" customClass="DetailCell" customModule="LocalWeather" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="243" width="600" height="295"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hTQ-wt-6md" id="dGY-rR-fe7">
@@ -314,11 +315,11 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <outlet property="dateLabel" destination="q26-yZ-eGl" id="NhE-9G-p1S"/>
-                                    <outlet property="descriptionLabel" destination="HhN-E8-O9B" id="1Wr-uE-aAR"/>
-                                    <outlet property="tempMaxLabel" destination="RFl-jE-ujJ" id="JO0-6m-epc"/>
-                                    <outlet property="tempMinLabel" destination="bex-pA-eK7" id="07p-9J-vDc"/>
-                                    <outlet property="thumnailImageView" destination="zfx-C3-Pu7" id="2R9-yu-66z"/>
+                                    <outlet property="dateLbl" destination="q26-yZ-eGl" id="GQE-rz-cB6"/>
+                                    <outlet property="descriptionLbl" destination="HhN-E8-O9B" id="Tm6-dy-03G"/>
+                                    <outlet property="imageViewWeather" destination="zfx-C3-Pu7" id="UWa-NP-B3H"/>
+                                    <outlet property="tempMaxLbl" destination="RFl-jE-ujJ" id="6rC-lM-1rR"/>
+                                    <outlet property="tempMinLbl" destination="bex-pA-eK7" id="gkU-yA-aFE"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -327,7 +328,7 @@
                             <outlet property="delegate" destination="3vD-Wx-e9s" id="bnN-fn-zlb"/>
                         </connections>
                     </tableView>
-                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="J9R-ak-dtv"/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
@@ -353,27 +354,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YPy-Kp-cDv">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YPy-Kp-cDv">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wdz-41-5hK">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wdz-41-5hK">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
                                 <color key="textColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kut-mc-aed">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kut-mc-aed">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="85"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="85"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f0s-u6-chv">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="45"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f0s-u6-chv">
+                                <rect key="frame" x="-40" y="-10" width="40" height="20"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="45"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -396,25 +397,25 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRx-H4-eUK">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRx-H4-eUK">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3D-n4-Vzk">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3D-n4-Vzk">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e28-yR-pCj">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e28-yR-pCj">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kdz-cu-a8v">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kdz-cu-a8v">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -469,14 +470,14 @@
                                 <exclude reference="YrM-DP-lUg"/>
                                 <exclude reference="5B7-v6-IdU"/>
                                 <exclude reference="ZHV-Gc-TaM"/>
-                                <exclude reference="5Y5-rA-JVz"/>
-                                <exclude reference="wqW-Aq-8NP"/>
                                 <exclude reference="RMg-SH-30b"/>
                                 <exclude reference="l5r-5K-7H5"/>
                                 <exclude reference="wtO-ay-ff9"/>
                                 <exclude reference="x6P-iN-10f"/>
                                 <exclude reference="hcH-gl-ah1"/>
                                 <exclude reference="rP2-Dz-aIV"/>
+                                <exclude reference="5Y5-rA-JVz"/>
+                                <exclude reference="wqW-Aq-8NP"/>
                                 <exclude reference="D3X-Cv-XhF"/>
                                 <exclude reference="Xgd-Pd-sUF"/>
                             </mask>
@@ -502,14 +503,14 @@
                                 <include reference="YrM-DP-lUg"/>
                                 <include reference="5B7-v6-IdU"/>
                                 <include reference="ZHV-Gc-TaM"/>
-                                <include reference="5Y5-rA-JVz"/>
-                                <include reference="wqW-Aq-8NP"/>
                                 <include reference="RMg-SH-30b"/>
                                 <include reference="l5r-5K-7H5"/>
                                 <include reference="wtO-ay-ff9"/>
                                 <include reference="x6P-iN-10f"/>
                                 <include reference="hcH-gl-ah1"/>
                                 <include reference="rP2-Dz-aIV"/>
+                                <include reference="5Y5-rA-JVz"/>
+                                <include reference="wqW-Aq-8NP"/>
                                 <include reference="D3X-Cv-XhF"/>
                                 <include reference="Xgd-Pd-sUF"/>
                             </mask>
@@ -517,15 +518,15 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <connections>
-                        <outlet property="dateLabel" destination="Wdz-41-5hK" id="END-ek-KjS"/>
-                        <outlet property="dayLabel" destination="YPy-Kp-cDv" id="Ih8-ro-q56"/>
-                        <outlet property="descriptionLabel" destination="lRx-H4-eUK" id="3YY-Nb-eNf"/>
-                        <outlet property="humidityLabel" destination="b3D-n4-Vzk" id="z7A-by-FBE"/>
-                        <outlet property="pressureLabel" destination="e28-yR-pCj" id="I9g-N8-BEh"/>
-                        <outlet property="tempMaxLabel" destination="kut-mc-aed" id="o6H-i7-c0C"/>
-                        <outlet property="tempMinLabel" destination="f0s-u6-chv" id="1Wr-FN-cve"/>
-                        <outlet property="thumnailImageView" destination="X5L-Zo-4yi" id="T5P-Fe-i3X"/>
-                        <outlet property="windLabel" destination="kdz-cu-a8v" id="7NX-ee-CIk"/>
+                        <outlet property="dateLbl" destination="Wdz-41-5hK" id="0gx-57-CFa"/>
+                        <outlet property="dayLbl" destination="YPy-Kp-cDv" id="2S3-6m-VAd"/>
+                        <outlet property="descriptLbl" destination="lRx-H4-eUK" id="CjQ-RV-Z6n"/>
+                        <outlet property="humidityLbl" destination="b3D-n4-Vzk" id="gHw-oy-yLV"/>
+                        <outlet property="imageView" destination="X5L-Zo-4yi" id="Fa3-lc-SqL"/>
+                        <outlet property="pressureLbl" destination="e28-yR-pCj" id="Ry2-6J-mBB"/>
+                        <outlet property="tempMaxLbl" destination="kut-mc-aed" id="jtb-lO-3DC"/>
+                        <outlet property="tempMinLbl" destination="f0s-u6-chv" id="PDV-15-KmV"/>
+                        <outlet property="windLbl" destination="kdz-cu-a8v" id="6Kt-sz-ssc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yi5-d4-Oug" userLabel="First Responder" sceneMemberID="firstResponder"/>

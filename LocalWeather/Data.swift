@@ -11,20 +11,20 @@ import UIKit
 
 class Data: UITableViewCell {
     
-    @IBOutlet var dateLabel: UILabel!
-    @IBOutlet var tempMaxLabel: UILabel!
-    @IBOutlet var tempMinLabel: UILabel!
-    @IBOutlet var thumnailImageView: UIImageView!
-    @IBOutlet var descriptionLabel: UILabel!
+    @IBOutlet var dateLbl: UILabel!
+    @IBOutlet var tempMaxLbl: UILabel!
+    @IBOutlet var tempMinLbl: UILabel!
+    @IBOutlet var imageViewWeather: UIImageView!
+    @IBOutlet var descriptLbl: UILabel!
     
 }
 
-class SummaryCell: UITableViewCell {
+class DetailCell: UITableViewCell {
     
-    @IBOutlet var thumnailImageView: UIImageView!
-    @IBOutlet var dateLabel: UILabel!
-    @IBOutlet var descriptionLabel: UILabel!
-    @IBOutlet var tempMaxLabel: UILabel!
-    @IBOutlet var tempMinLabel: UILabel!
+    @IBOutlet var imageViewWeather: UIImageView!
+    @IBOutlet var dateLbl: UILabel!
+    @IBOutlet var descriptionLbl: UILabel!
+    @IBOutlet var tempMaxLbl: UILabel!
+    @IBOutlet var tempMinLbl: UILabel!
     
 }
