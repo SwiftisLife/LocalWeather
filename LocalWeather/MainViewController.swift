@@ -101,7 +101,7 @@ class MainViewController: UITableViewController {
 
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCellWithIdentifier("data", forIndexPath: indexPath) as! Data
-            let date = NSDate(timeIntervalSince1970: Double(day.date))
+            let date = NSDate()
             cell.dateLabel.text = date.dayOfWeekString() + ", \(date.dateString())"
             cell.tempMaxLabel.text = String(day.temp.max) + "°"
             cell.tempMinLabel.text = String(day.temp.min) + "°"
