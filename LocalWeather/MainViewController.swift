@@ -91,7 +91,6 @@ class MainViewController: UITableViewController {
     }
 
     
-    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return days.count
     }
