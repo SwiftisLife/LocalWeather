@@ -7,7 +7,7 @@
 
 # Deploying on Xcode: 
 * Use Swift 2.3 if you're using Xcode 8. This project was built with Xcode 7.3.1 but may still run on Xcode 8 providing you select Swift 2.3 as your language. I have not tested or migrated this project into Swift 3 as yet.
-* Any errors will be due to migrating code or outdated syntax!
+* Any errors will be due to migrating code or outdated syntax! (Xcode 8 bug issues.)
 
 
 # More information:
