@@ -48,7 +48,7 @@ class MainViewController: UITableViewController {
         }
         
         UIApplication.sharedApplication().networkActivityIndicatorVisible = false
-        let url = NSURL(string: "http://api.openweathermap.org/data/2.5/forecast/daily?units=imperial&cnt=16&lat=33.749&lon=-84.387978&appid=\(apiKey)")
+        let url = NSURL(string: "http://api.openweathermap.org/data/2.5/forecast/daily?units=imperial&cnt=16&lat=33.7490&lon=-84.3880&appid=\(apiKey)")
         
         dataTask = defaultSession.dataTaskWithURL(url!) {
             data, response, error in
