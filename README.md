@@ -1,6 +1,6 @@
 # LocalWeather: Weather updates for Atlanta, GA 🍑
 
-
+* **iOS9 +**
 * Built in **Swift 2.3** for **Xcode 7.3.1**.
 * Uses a weather API designated to Atlanta, GA (http://openweathermap.org/api).
 * Includes **UIRefreshControl**.
