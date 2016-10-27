@@ -12,9 +12,9 @@ struct Forecast {
     let temp: (min:Int, max:Int)
     let iconName:String
     let descript:String
-    let humid:Int // percentage
-    let pressure:Int // hPA
-    let wind: (speed: Float, angle: Int)  // km/h NW (for example)
+    let humid:Int 
+    let pressure:Int
+    let wind: (speed: Float, angle: Int)
     
     init?(json: [String: AnyObject]) {
         guard let date = json["dt"] as? Int,
