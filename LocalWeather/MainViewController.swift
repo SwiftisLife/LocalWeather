@@ -21,8 +21,8 @@ class MainViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        refreshControl?.tintColor = UIColor.grayColor()
-        refreshControl?.attributedTitle = NSAttributedString(string: "Updating")
+          refreshControl?.tintColor = UIColor.grayColor()
+       // refreshControl?.attributedTitle = NSAttributedString(string: "Updating")
         self.weatherUpdates.addSubview(refresh)
         
         loadRefreshControl()
@@ -35,7 +35,7 @@ class MainViewController: UITableViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        refresh.endRefreshing()
+      
         
     }
     
@@ -45,7 +45,7 @@ class MainViewController: UITableViewController {
             dataTask?.cancel()
         }
         
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = false
         let url = NSURL(string: "http://api.openweathermap.org/data/2.5/forecast/daily?units=imperial&cnt=16&lat=33.749&lon=-84.387978&appid=\(apiKey)")
         
         dataTask = defaultSession.dataTaskWithURL(url!) {
