@@ -1,5 +1,3 @@
-# LocalWeather: Live Weather updates for Atlanta, GA 🍑
-
 # Project specifications: 
 * **iOS9 +**
 * Built in **Swift 2.3** for **Xcode 7.3.1**.
