@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		55D87D691DC1B9D7007D18B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D87D681DC1B9D7007D18B2 /* AppDelegate.swift */; };
-		55D87D6B1DC1B9D7007D18B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D87D6A1DC1B9D7007D18B2 /* ViewController.swift */; };
-		55D87D6E1DC1B9D7007D18B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55D87D6C1DC1B9D7007D18B2 /* Main.storyboard */; };
 		55D87D701DC1B9D7007D18B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55D87D6F1DC1B9D7007D18B2 /* Assets.xcassets */; };
 		55D87D731DC1B9D7007D18B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55D87D711DC1B9D7007D18B2 /* LaunchScreen.storyboard */; };
+		55D87D7D1DC1BA9D007D18B2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D87D7C1DC1BA9D007D18B2 /* MainViewController.swift */; };
+		55D87D7F1DC1BAAD007D18B2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D87D7E1DC1BAAD007D18B2 /* DetailViewController.swift */; };
+		55D87D811DC1BAD5007D18B2 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D87D801DC1BAD5007D18B2 /* Forecast.swift */; };
+		55D87D831DC1BB8D007D18B2 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D87D821DC1BB8D007D18B2 /* Data.swift */; };
+		55DBF57C1DC1D936000204C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55DBF57B1DC1D936000204C9 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		55D87D651DC1B9D7007D18B2 /* LocalWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55D87D681DC1B9D7007D18B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		55D87D6A1DC1B9D7007D18B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		55D87D6D1DC1B9D7007D18B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		55D87D6F1DC1B9D7007D18B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55D87D721DC1B9D7007D18B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55D87D741DC1B9D7007D18B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55D87D7C1DC1BA9D007D18B2 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		55D87D7E1DC1BAAD007D18B2 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		55D87D801DC1BAD5007D18B2 /* Forecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
+		55D87D821DC1BB8D007D18B2 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		55DBF57B1DC1D936000204C9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +61,11 @@
 			isa = PBXGroup;
 			children = (
 				55D87D681DC1B9D7007D18B2 /* AppDelegate.swift */,
-				55D87D6A1DC1B9D7007D18B2 /* ViewController.swift */,
-				55D87D6C1DC1B9D7007D18B2 /* Main.storyboard */,
+				55DBF57B1DC1D936000204C9 /* Main.storyboard */,
+				55D87D7C1DC1BA9D007D18B2 /* MainViewController.swift */,
+				55D87D7E1DC1BAAD007D18B2 /* DetailViewController.swift */,
+				55D87D821DC1BB8D007D18B2 /* Data.swift */,
+				55D87D801DC1BAD5007D18B2 /* Forecast.swift */,
 				55D87D6F1DC1B9D7007D18B2 /* Assets.xcassets */,
 				55D87D711DC1B9D7007D18B2 /* LaunchScreen.storyboard */,
 				55D87D741DC1B9D7007D18B2 /* Info.plist */,
@@ -122,9 +131,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55DBF57C1DC1D936000204C9 /* Main.storyboard in Resources */,
 				55D87D731DC1B9D7007D18B2 /* LaunchScreen.storyboard in Resources */,
 				55D87D701DC1B9D7007D18B2 /* Assets.xcassets in Resources */,
-				55D87D6E1DC1B9D7007D18B2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,22 +144,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55D87D6B1DC1B9D7007D18B2 /* ViewController.swift in Sources */,
+				55D87D811DC1BAD5007D18B2 /* Forecast.swift in Sources */,
+				55D87D831DC1BB8D007D18B2 /* Data.swift in Sources */,
+				55D87D7F1DC1BAAD007D18B2 /* DetailViewController.swift in Sources */,
 				55D87D691DC1B9D7007D18B2 /* AppDelegate.swift in Sources */,
+				55D87D7D1DC1BA9D007D18B2 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		55D87D6C1DC1B9D7007D18B2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				55D87D6D1DC1B9D7007D18B2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		55D87D711DC1B9D7007D18B2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -288,6 +292,7 @@
 				55D87D791DC1B9D7007D18B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
