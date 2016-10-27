@@ -11,7 +11,6 @@ import UIKit
 class MainViewController: UITableViewController {
     
     @IBOutlet var weatherUpdates: UITableView!
-    
     var refresh = UIRefreshControl()
     var days = [Forecast]()
     var dataTask: NSURLSessionDataTask?
