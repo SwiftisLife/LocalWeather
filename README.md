@@ -19,9 +19,5 @@ email: SafinaLifa@gmail.com and please visit http://www.iosislife.com for other 
 
 Commercial use is strictly forbidden.
 
-
-![simulator screen shot oct 27 2016 2 41 38 pm](https://cloud.githubusercontent.com/assets/21044119/19780946/376f215e-9c55-11e6-9249-1cbef020e72b.png)
-
-![js42e7ttwr](https://cloud.githubusercontent.com/assets/21044119/19780636/e3f51476-9c53-11e6-871e-d7c4f3a7f1d1.gif)
-
-
+![simulator screen shot oct 28 2016 2 15 42 pm](https://cloud.githubusercontent.com/assets/21044119/19817410/786997c4-9d19-11e6-9a99-13235ba735ad.png)
+![xdvldtsxl1](https://cloud.githubusercontent.com/assets/21044119/19817365/4788f104-9d19-11e6-9b1b-7ad4165935f8.gif)
