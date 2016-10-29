@@ -24,7 +24,6 @@ class DetailViewController: UIViewController {
     var day:Forecast!
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
         
         let date = NSDate(timeIntervalSince1970: Double(day.date))
