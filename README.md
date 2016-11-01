@@ -11,7 +11,7 @@
 
 
 # More information:
-This project was written in Atlanta, GA by Safina Lifa in October 2016.
+This project was written in Atlanta, GA by Safina Alexandra Lifa in October 2016.
 
 Please forward all questions and queries to:
 
