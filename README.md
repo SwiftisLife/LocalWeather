@@ -11,11 +11,10 @@
 
 
 # More information:
-This project was written in Atlanta, GA by Safina Alexandra Lifa in October 2016.
 
 Please forward all questions and queries to:
 
-email: SafinaLifa@gmail.com and please visit http://www.iosislife.com for other projects written in Swift for iOS.
+email: s.alexl@icloud.com and please visit http://www.iosislife.com for other projects written in Swift for iOS.
 
 Commercial use is strictly forbidden.
 
